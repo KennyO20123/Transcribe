@@ -10,7 +10,7 @@ A translating website that takes a user's input and informs them what language i
 ![API Landing Page](https://user-images.githubusercontent.com/81450209/143970736-a4955126-0364-4b36-b63d-329ce626521b.png)
 
 
-# Colors from WireFrame
+# Colors From WireFrame
 https://images.creativemarket.com/0.1.0/ps/1831189/5417/5417/m1/fpnw/wm1/icons_ancient-egypt_flat-.jpg?1477982417&s=39930334b306783be6e4f4bcf2ac4789
 
 
@@ -18,7 +18,7 @@ https://images.creativemarket.com/0.1.0/ps/1831189/5417/5417/m1/fpnw/wm1/icons_a
 Microsoft Translator API 
 https://docs.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-translator?tabs=csharp
 
- There Endpoints =>
+ Three Endpoints =>
 
 Detect Endpoint - Detects which language is being read
 
@@ -26,19 +26,31 @@ Translating Endpoint -  Translates language to users to desired language
 
 Dictionary Examples - Shows a sentence using the word that the user inputs
 
-# Possibly more API'S
+# Plan If First API Fails
+Bing Translate API
+
+Google Translate API
+
+Detect Language API
+
+# Possibly More API'S
+HelloSalut API
+
+
 Google Map API
 
-Ima
-
+Getty Images API
 
 #  Responsive CSS Framework
-Bulma CSS for responsiveness, Figma for wireframing, Google Docs for simplifying our idea. 
+Bulma CSS for responsiveness
 https://bulma.io/
 
 # Additional Resources
-Figma: for our wireframing purposes
-Resources: coolers color templates https://coolors.co/b0f2b4-baf2e9-bad7f2-f2bac9-f2e2ba
+Figma : For our wireframing purposes
+
+Color Schemes : Coolers color templates https://coolors.co/b0f2b4-baf2e9-bad7f2-f2bac9-f2e2ba
+
 Google Fonts : Noto Sans https://fonts.google.com/noto/specimen/Noto+Sans?query=noto+san
+
 Background Image : https://lingojam.com/img/upload/hieroglyphicstranslator_bgImage.jpg
 
