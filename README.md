@@ -20,26 +20,30 @@ https://docs.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-
 
  Three Endpoints =>
 
-Detect Endpoint - Detects which language is being read
+Detect Endpoint - Detects which language is being read https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-detect
 
-Translating Endpoint -  Translates language to users to desired language
+Translating Endpoint -  Translates language to users to desired language https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate
 
-Dictionary Examples - Shows a sentence using the word that the user inputs
+Dictionary Examples - Shows a sentence using the word that the user inputs https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-dictionary-examples
 
 # Plan If First API Fails
-Bing Translate API
 
-Google Translate API
+Google Translate API - A Translator API made by Google https://cloud.google.com/translate/docs/basic/translating-text
 
-Detect Language API
+Detect Language API - A  API that detects the language written https://detectlanguage.com/
 
 # Possibly More API'S
-HelloSalut API
+HelloSalut API - An  API  that says Hi to the user in their language https://fourtonfish.com/project/hellosalut-api/
 
+Google Map API - An API that shows map features and geolocations https://developers.google.com/maps
 
-Google Map API
+Getty Images API - An Image API https://developer.gettyimages.com/
 
-Getty Images API
+EmailJS https://www.emailjs.com/
+
+Twillio sendGrid https://docs.sendgrid.com/for-developers/sending-email/quickstart-nodejs
+
+NodeMailer - For Mailing translated text to yourself or anyone else in the world!!! https://nodemailer.com/about/
 
 #  Responsive CSS Framework
 Bulma CSS for responsiveness
