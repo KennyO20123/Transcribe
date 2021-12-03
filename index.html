@@ -10,20 +10,87 @@
   <body>
     <h1 id="heading">Here</h1>
 
-  
+    <form action="">
+      <!-- <input type="text" name="textToBeTranslated" id="userTextInput" autocomplete="off" value=""> -->
+      <!-- Text To Be Translated here -->
+      <h2 id="Detected"></h2>
+      <label for="languagesSelection">Choose a language:</label>
+      <select
+        name="languagesSelectionBar"
+        id="languageSelectionBar"
+        class="languageSelectionBar"
+      >
+        <option value="detectLanguage">Detect language</option>
+        <option value="af">Afrikaans</option>
+        <option value="sq">Albanian</option>
+        <option value="am">Amharic</option>
+        <option value="ar">Arabic</option>
+        <option value="hy">Armenian</option>
+        <option value="as">Assamese</option>
+        <option value="az">Azerbaijani</option>
+        <option value="bn">Bangla</option>
+        <option value="bs">Bosnian (Latin)</option>
+        <option value="bg">Bulgarian</option>
+        <option value="yue">Cantonese (Traditional)</option>
+        <option value="ca">Catalan</option>
+        <option value="zh-Hans">Chinese Simplified</option>
+        <option value="zh-Hant">Chinese Traditional</option>
+        <option value="hr">Croatian</option>
+        <option value="cs">Czech</option>
+      </select>
+      <br />
+      <textarea
+        type="text"
+        name="textToBeTranslated"
+        id="userTextInput"
+        autocomplete="off"
+        value=""
+        cols="30"
+        rows="10"
+      ></textarea>
 
-     <form action="">
-       <input type="text" name="textToBeTranslated" id="userTextInput" autocomplete="off" value="">
-       <br>
-        <input class="language" type="radio" name="language" value="es-ES">Spanish</option>
-        <input class="language" type="radio" name="language" value="ja-JP">Japanese</option>
-        <input class="language" type="radio" name="language" value="ko-KR">Korean</option>
-        <input class="language" type="radio" name="language" value="nl-BE">Dutch</option>
+      <br />
+      <button id="buttonForSwitchingLanguages" type="button">switch</button>
+      <br />
+      <!-- Translated Text Stuff here -->
+      <textarea
+        type="text"
+        name="textTranslated"
+        id="serverTranslatedText"
+        autocomplete="off"
+        value=""
+        cols="30"
+        rows="10"
+      ></textarea>
 
-      </form>
-  
-    <button id="submitCheckbox">Checkbox</button>
-    <button id="selectedButton">Translate</button>
+      <br />
+      <h2 id="Detected2"></h2>
+      <label for="languagesSelection2">Choose a language:</label>
+      <select
+        name="languagesSelectionBar2"
+        id="languageSelectionBar2"
+        class="languageSelectionBar2"
+      >
+        <option value="af">Afrikaans</option>
+        <option value="sq">Albanian</option>
+        <option value="am">Amharic</option>
+        <option value="ar">Arabic</option>
+        <option value="hy">Armenian</option>
+        <option value="as">Assamese</option>
+        <option value="az">Azerbaijani</option>
+        <option value="bn">Bangla</option>
+        <option value="bs">Bosnian (Latin)</option>
+        <option value="bg">Bulgarian</option>
+        <option value="yue">Cantonese (Traditional)</option>
+        <option value="ca">Catalan</option>
+        <option value="zh-Hans">Chinese Simplified</option>
+        <option value="zh-Hant">Chinese Traditional</option>
+        <option value="hr">Croatian</option>
+        <option value="cs">Czech</option>
+      </select>
+    </form>
+
+    <button id="buttonForTranslate">Translate</button>
   </body>
 </html>
 
