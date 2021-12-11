@@ -1,7 +1,53 @@
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Height of the footer */
-  background: #3E8ED0;
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
+}
+
+.container {
+  display: flex;
+}
+ul {
+  display: table;
+  margin: 0 auto;
+}
+
+#langCodeOfDetect {
+  text-align: center;
+}
+
+#userDetectInput {
+  width: 30%;
+  left: 33%;
+  margin: 1%;
+}
+
+#detectUsersInput {
+  margin: 0 auto;
+  display: block;
+}
+
+#selectLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+}
+
+#languageSelectionBar3 {
+  left: 6%;
+}
+#Top5 {
+  margin: 0 auto;
+  display: block;
+}
+
+#JoshuasGarbage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

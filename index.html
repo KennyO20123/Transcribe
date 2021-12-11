@@ -6,93 +6,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
+        <!-- Start of navbar -->
+        <nav class="navbar is-transparent">
+       
+          <div class="navbar-brand">
+            
+            <a class="navbar-item" href="">
+            
+            </a>
+        <div class="container" >
+          <nav class="navbar">
+              <div class="navbar-brand">
+                  </a>
+                  <div class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </div>
+              <div  class="navbar-menu">
+                
+                  <div class="navbar-start">
+  
+                      <div class="navbar-item ">
+                       <div class="navbar-start">
+                        <a class="navbar-item">
+                          Home
+                        </a>
+                  
+                        <a class="navbar-item">
+                         Translate
+                        </a>
+                        <a class="navbar-item">
+                          Dictionary Lookup
+                         </a>
+                        </div>
+                      </div>
+                  </div>
+      
+                  </div>
+                  
+              </div>
+              
+          </nav>
+          <img id="JoshuasGarbage"width="25%" height="100%" src="images/Logo-01.png" alt="Transcribe: 1 cool kid 2 nerds" >
+      </div>
+    
+    <!-- navbar -->
     <h1 id="heading">Here</h1>
-
-    <form action="">
-      <!-- <input type="text" name="textToBeTranslated" id="userTextInput" autocomplete="off" value=""> -->
-      <!-- Text To Be Translated here -->
-      <h2 id="Detected"></h2>
-      <label for="languagesSelection">Choose a language:</label>
-      <select
-        name="languagesSelectionBar"
-        id="languageSelectionBar"
-        class="languageSelectionBar"
-      >
-        <option value="detectLanguage">Detect language</option>
-        <option value="af">Afrikaans</option>
-        <option value="sq">Albanian</option>
-        <option value="am">Amharic</option>
-        <option value="ar">Arabic</option>
-        <option value="hy">Armenian</option>
-        <option value="as">Assamese</option>
-        <option value="az">Azerbaijani</option>
-        <option value="bn">Bangla</option>
-        <option value="bs">Bosnian (Latin)</option>
-        <option value="bg">Bulgarian</option>
-        <option value="yue">Cantonese (Traditional)</option>
-        <option value="ca">Catalan</option>
-        <option value="zh-Hans">Chinese Simplified</option>
-        <option value="zh-Hant">Chinese Traditional</option>
-        <option value="hr">Croatian</option>
-        <option value="cs">Czech</option>
-      </select>
-      <br />
-      <textarea
+    <h2 id="Detected" class="subtitle is-3"></h2>
+    <!-- test -->
+    <section class="is-medium">
+      <nav class="level">
+        <!-- First LanguageSelectionBar and Textarea -->
+    
+      
+      <div class="field column is-two-fifths">
+        <label for="languagesSelection">Choose a language:</label>
+        <div class="select">
+      
+          <select
+            name="languagesSelectionBar"
+            id="languageSelectionBar"
+            class="languageSelectionBar"
+          >
+            <option value="detectLanguage">Detect language</option>
+            <option value="af">Afrikaans</option>
+            <option value="sq">Albanian</option>
+            <option value="am">Amharic</option>
+            <option value="ar">Arabic</option>
+            <option value="hy">Armenian</option>
+            <option value="as">Assamese</option>
+            <option value="az">Azerbaijani</option>
+            <option value="bn">Bangla</option>
+            <option value="bs">Bosnian (Latin)</option>
+            <option value="bg">Bulgarian</option>
+            <option value="yue">Cantonese (Traditional)</option>
+            <option value="ca">Catalan</option>
+            <option value="zh-Hans">Chinese Simplified</option>
+            <option value="zh-Hant">Chinese Traditional</option>
+            <option value="hr">Croatian</option>
+            <option value="cs">Czech</option>
+            <option value="da">Danish</option>
+            <option value="nl">Dutch</option>
+            <option value="en">English</option>
+            <option value="et">Estonian</option>
+            <option value="fi">Finnish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="el">Greek</option>
+            <option value="gu">Gujarati</option>
+            <option value="ht">Haitian Creole</option>
+            <option value="he">Hebrew</option>
+            <option value="hi">Hindi</option>
+            <option value="hu">Hungarian</option>
+            <option value="is">Icelandic</option>
+            <option value="id">Indonesian</option>
+            <option value="iu">Inuktitut</option>
+            <option value="ga">Irish</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="km">Khmer</option>
+            <option value="ko">Korean</option>
+            <option value="ku">Kurdish (Central)</option>
+            <option value="lo">Lao</option>
+            <option value="lv">Latvian</option>
+            <option value="lt">Lithuanian</option>
+            <option value="ms">Malay</option>
+            <option value="mt">Maltese</option>
+            <option value="my">Myanmar</option>
+            <option value="nb">Norwegian</option>
+            <option value="ps">Pashto</option>
+            <option value="fa">Persian</option>
+            <option value="pl">Polish</option>
+            <option value="pt">Portuguese (Brazil)</option>
+            <option value="ro">Romanian</option>
+            <option value="ru">Russian</option>
+            <option value="sr-Cyrl">Serbian (Cyrillic)</option>
+            <option value="sr-Latn">Serbian (Latin)</option>
+            <option value="sk">Slovak</option>
+            <option value="sl">Slovenian</option>
+            <option value="es">Spanish</option>
+            <option value="sw">Swahili</option>
+            <option value="sv">Swedish</option>
+            <option value="tr">Turkish</option>
+            <option value="uk">Ukrainian</option>
+            <option value="ur">Urdu</option>
+            <option value="vi">Vietnamese</option>
+            <option value="cy">Welsh</option>
+            <option value="yua">Yucatec Maya</option>
+          </select>
+        </div>
+        <div class="control">
+          <textarea
         type="text"
         name="textToBeTranslated"
         id="userTextInput"
+        class="textarea"
         autocomplete="off"
         value=""
         cols="30"
         rows="10"
       ></textarea>
+        </div>
+      </div>
+      <!-- switch button -->
+      <button id="buttonForSwitchingLanguages" type="button" class="button">switch</button>
+      <button id="buttonForTranslate" class="button">Translate</button>
+      <!-- Second LanguageSelectionBar and Textarea -->
+     
+      <div class="field  column is-two-fifths">
+        <label for="languagesSelection2">Choose a language:</label>
+        <div class="select">
+          <select
+            name="languagesSelectionBar2"
+            id="languageSelectionBar2"
+            class="languageSelectionBar2"
+          >
 
-      <br />
-      <button id="buttonForSwitchingLanguages" type="button">switch</button>
-      <br />
-      <!-- Translated Text Stuff here -->
-      <textarea
+          <option value="af">Afrikaans</option>
+          <option value="sq">Albanian</option>
+          <option value="am">Amharic</option>
+          <option value="ar">Arabic</option>
+          <option value="hy">Armenian</option>
+          <option value="as">Assamese</option>
+          <option value="az">Azerbaijani</option>
+          <option value="bn">Bangla</option>
+          <option value="bs">Bosnian (Latin)</option>
+          <option value="bg">Bulgarian</option>
+          <option value="yue">Cantonese (Traditional)</option>
+          <option value="ca">Catalan</option>
+          <option value="zh-Hans">Chinese Simplified</option>
+          <option value="zh-Hant">Chinese Traditional</option>
+          <option value="hr">Croatian</option>
+          <option value="cs">Czech</option>
+          <option value="da">Danish</option>
+          <option value="nl">Dutch</option>
+          <option value="en">English</option>
+          <option value="et">Estonian</option>
+          <option value="fi">Finnish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="el">Greek</option>
+          <option value="gu">Gujarati</option>
+          <option value="ht">Haitian Creole</option>
+          <option value="he">Hebrew</option>
+          <option value="hi">Hindi</option>
+          <option value="hu">Hungarian</option>
+          <option value="is">Icelandic</option>
+          <option value="id">Indonesian</option>
+          <option value="iu">Inuktitut</option>
+          <option value="ga">Irish</option>
+          <option value="it">Italian</option>
+          <option value="ja">Japanese</option>
+          <option value="km">Khmer</option>
+          <option value="ko">Korean</option>
+          <option value="ku">Kurdish (Central)</option>
+          <option value="lo">Lao</option>
+          <option value="lv">Latvian</option>
+          <option value="lt">Lithuanian</option>
+          <option value="ms">Malay</option>
+          <option value="mt">Maltese</option>
+          <option value="my">Myanmar</option>
+          <option value="nb">Norwegian</option>
+          <option value="ps">Pashto</option>
+          <option value="fa">Persian</option>
+          <option value="pl">Polish</option>
+          <option value="pt">Portuguese (Brazil)</option>
+          <option value="ro">Romanian</option>
+          <option value="ru">Russian</option>
+          <option value="sr-Cyrl">Serbian (Cyrillic)</option>
+          <option value="sr-Latn">Serbian (Latin)</option>
+          <option value="sk">Slovak</option>
+          <option value="sl">Slovenian</option>
+          <option value="es">Spanish</option>
+          <option value="sw">Swahili</option>
+          <option value="sv">Swedish</option>
+          <option value="tr">Turkish</option>
+          <option value="uk">Ukrainian</option>
+          <option value="ur">Urdu</option>
+          <option value="vi">Vietnamese</option>
+          <option value="cy">Welsh</option>
+          <option value="yua">Yucatec Maya</option>
+          </select>
+        </div>
+        <div class="control">
+          <textarea
         type="text"
         name="textTranslated"
         id="serverTranslatedText"
+        class="textarea"
         autocomplete="off"
         value=""
         cols="30"
         rows="10"
       ></textarea>
+    
+        </div>
+      </div>
+    
+      </div>
+      </nav>
+      
+    </section>
+    <!-- Start Of Detect Language Section -->
+    <section class="is-medium">
+    <p id="langCodeOfDetect"></p>
+    <input type="text" value="" name="detectLang" id="userDetectInput" class="input is-rounded"  />
+<br>
+    <button id="detectUsersInput" class="button">Detect!</button>
+  
+  </section>
+  <section class="is-medium" >
+    <div id="selectLabel">
+   <label for="languagesSelection2"
+   >Choose Language : </label>
+ <div class="select" >
+ <select
+   name="languagesSelectionBar3"
+   id="languageSelectionBar3"
+   class="languageSelectionBar3"
 
-      <br />
-      <h2 id="Detected2"></h2>
-      <label for="languagesSelection2">Choose a language:</label>
-      <select
-        name="languagesSelectionBar2"
-        id="languageSelectionBar2"
-        class="languageSelectionBar2"
-      >
-        <option value="af">Afrikaans</option>
-        <option value="sq">Albanian</option>
-        <option value="am">Amharic</option>
-        <option value="ar">Arabic</option>
-        <option value="hy">Armenian</option>
-        <option value="as">Assamese</option>
-        <option value="az">Azerbaijani</option>
-        <option value="bn">Bangla</option>
-        <option value="bs">Bosnian (Latin)</option>
-        <option value="bg">Bulgarian</option>
-        <option value="yue">Cantonese (Traditional)</option>
-        <option value="ca">Catalan</option>
-        <option value="zh-Hans">Chinese Simplified</option>
-        <option value="zh-Hant">Chinese Traditional</option>
-        <option value="hr">Croatian</option>
-        <option value="cs">Czech</option>
-      </select>
-    </form>
 
-    <button id="buttonForTranslate">Translate</button>
+ >
+   <option value="english">English</option>
+   <option value="spanish">Spanish</option>
+   <option value="chinese">Chinese</option>
+ </select>
+    </div>
+ 
+  </div>
+  <br /> 
+  <button id="Top5" > Countries That Speak that Language!</button>
+<br>
+  <h1 id="outputResults" ></h1>
+ 
+  <ul id="myUl"></ul>
+
+  </section>
   </body>
 </html>
+
+
 
 <!-- export values out from main 
 make a function on script

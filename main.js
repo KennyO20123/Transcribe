@@ -3,12 +3,22 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+// MICROSOFT API's
 const BASE_URL = process.env.BASE_URL;
 const URL_DETECT = process.env.URL_DETECT;
 const API_KEY = process.env.API_KEY;
 const HOST = process.env.HOST;
 
+//NON-MICROSOFT API'S
+const DETECT_LANG_API_KEY = process.env.DETECT_LANG_API_KEY;
+const TOP_5_URL = process.env.TOP_5_URL;
+
+// const URL_DICTIONARY = process.env.URL_DICTIONARY;
+const DetectLanguage = require("detectlanguage");
+const detectlanguage2NDAPI = new DetectLanguage(`${DETECT_LANG_API_KEY}`);
+
 // Button For Switching Languages
+
 let buttonForSwitchingLanguages = document.getElementById(
   "buttonForSwitchingLanguages"
 );
@@ -132,8 +142,6 @@ buttonTranslate.addEventListener("click", async () => {
         .request(translateOptions)
         .then(function (responseTranslate) {
           //Grabbing certain elements(Headings and textareas inputs) to reflect whats being translated to the frontend
-          document.getElementById("heading").innerHTML =
-            responseTranslate.data[0].translations[0].text;
           document.getElementById("serverTranslatedText").value =
             responseTranslate.data[0].translations[0].text;
           // document.getElementById("Detected").innerHTML =
@@ -142,7 +150,7 @@ buttonTranslate.addEventListener("click", async () => {
           let language = document.getElementById("languageSelectionBar");
           /*A for loop that iterates to all the languages and returns the languges 
           that share the same value of the detected languages */
-          for (let i = 0; i < language.length; i++) {
+          for (let i = 0; i < language.options.length; i++) {
             let option = language.options[i];
             if (
               option.value ==
@@ -156,9 +164,9 @@ buttonTranslate.addEventListener("click", async () => {
           let language2 = document.getElementById("languageSelectionBar2");
           /*A for loop that iterates to all the languages and returns the languges 
           that share the same value of given language */
-          for (let j = 0; j < language2.length; j++) {
+          for (let j = 0; j < language2.options.length; j++) {
             let option2 = language2.options[j];
-            console.log(option2);
+
             if (
               option2.value == language2.options[language2.selectedIndex].value
             ) {
@@ -203,12 +211,11 @@ buttonTranslate.addEventListener("click", async () => {
       .request(translateOptions)
       .then(function (response) {
         //reflect on the frontend what language the user chose and the text that got translated
-        document.getElementById("heading").innerHTML =
-          response.data[0].translations[0].text;
+
         document.getElementById("serverTranslatedText").value =
           response.data[0].translations[0].text;
         let language = document.getElementById("languageSelectionBar");
-        for (let i = 1; i < language.length; i++) {
+        for (let i = 0; i < language.options.length; i++) {
           let option = language.options[i];
           if (option.value == response.data[0].detectedLanguage.language) {
             document.getElementById("Detected").innerHTML =
@@ -222,6 +229,56 @@ buttonTranslate.addEventListener("click", async () => {
       });
   }
 });
+
+// DetectLanguage Endpoint
+const buttonForDetectLanguage = document.getElementById("detectUsersInput");
+
+buttonForDetectLanguage.addEventListener("click", async () => {
+  let text = document.getElementById("userDetectInput").value;
+
+  if (!text) {
+    alert("Please put something in the detection");
+  } else if (text) {
+    detectlanguage2NDAPI.detect(text).then(function (result) {
+      document.getElementById("langCodeOfDetect").innerHTML =
+        "The language" +
+        " is " +
+        result[0].language +
+        " with a confidence level of " +
+        result[0].confidence;
+    });
+  }
+});
+
+//Top 5 languages
+
+const Top5Lang = document.getElementById("Top5");
+Top5Lang.addEventListener("click", async () => {
+  let LanguageForCountry = languageSelectionBar3.value;
+
+  let data = `${TOP_5_URL}` + LanguageForCountry;
+  axios
+    .request(data)
+
+    .then(function (res) {
+      let countries = [];
+
+      for (let x = 0; x < res.data.length; x++) {
+        countries.push(res.data[x].name.common);
+      }
+      for (i = 0; i < countries.length; i++) {
+        let li = document.createElement("li");
+        let text = document.createTextNode(countries[i]);
+        li.appendChild(text);
+        document.getElementById("myUl").appendChild(li);
+      }
+    });
+});
+
+// data fetched from API
+
+// array to store lang with stats
+
 //Useless Junk but I worked hard to think of these stuff and I don't want to redo them if theres ever a case we need it
 //Detect + Translate
 
@@ -386,3 +443,73 @@ buttonTranslate.addEventListener("click", async () => {
 //       console.error(error1);
 // });
 // }
+
+// Dictionary Example Endpoint
+
+// const buttonForDictionaryExample = document.getElementById(
+//   "buttonForDictionaryExample"
+// );
+// let userDictionaryWord = document.getElementById("userDictionaryWord").value;
+
+// buttonForDictionaryExample.addEventListener("click", async () => {
+//   let word = document.getElementById("dictionaryWordLookUp").value;
+//   let dictLang = document.getElementById("languageSelectionBar3").value;
+//   console.log(dictLang);
+//   let urlDictionary =
+//     "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=" +
+//     `${DICTIONARY_API_KEY}` +
+//     "&lang=" +
+//     `${dictLang}` +
+//     "&text=" +
+//     `${word}`;
+//   axios
+//     .request(urlDictionary)
+
+//     .then(function (responseDict) {
+//       console.log(responseDict);
+//       console.log(responseDict.data.def);
+//       console.log(responseDict.data.def[0].pos); //Gives if noun or detirmner
+//       console.log(responseDict.data.def[0].text); //Gives text that was inserted and is being dictionaried
+//       console.log(responseDict.data.def[0].tr[0].text); //Outputs text that was inserted and translated to given language
+//       console.log(responseDict.data.def[0].tr[1].text); //Outputs text that have more translations
+//       console.log(responseDict.data.def[0].tr[2].text);
+//       console.log(responseDict.data.def[0].tr[3].text);
+//       // let wordInputtedByUser = responseDict.data.def[0].text;
+//       // let nounOrDeterminer = responseDict.data.def[0].pos;
+//       console.log(responseDict.data.def[0].tr[0].pos);
+//       // document.getElementById("outputResults").innerHTML =
+//       //   wordInputtedByUser +
+//       //   " is a " +
+//       //   nounOrDeterminer +
+//       //   " down below are other examples of how to say the word in its respective language";
+//       if (
+//         responseDict.data.def[0].tr[0].text &&
+//         responseDict.data.def[0].tr[1].text &&
+//         responseDict.data.def[0].tr[2].text
+//       ) {
+//         let word1 = responseDict.data.def[0].tr[0].text;
+//         let word2 = responseDict.data.def[0].tr[1].text;
+//         let word3 = responseDict.data.def[0].tr[2].text;
+//         document.getElementById("1stItem").innerHTML = word1;
+//         document.getElementById("2ndItem").innerHTML = word2;
+//         document.getElementById("3rdItem").innerHTML = word3;
+//       } else if (
+//         responseDict.data.def[0].tr[0].text &&
+//         responseDict.data.def[0].tr[1].text
+//       ) {
+//         let word1 = responseDict.data.def[0].tr[0].text;
+//         let word2 = responseDict.data.def[0].tr[1].text;
+//         document.getElementById("1stItem").innerHTML = word1;
+//         document.getElementById("2ndItem").innerHTML = word2;
+//       } else if (responseDict.data.def[0].tr[0].text) {
+//         let word1 = responseDict.data.def[0].tr[0].text;
+//         document.getElementById("1stItem").innerHTML = word1;
+//       } else {
+//         document.getElementById("1stItem").innerHTML = "Nothing";
+//       }
+//     })
+
+//     .catch(function (errorDict) {
+//       console.error(errorDict);
+//     });
+// });
