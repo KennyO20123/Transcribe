@@ -26,11 +26,12 @@ Translating Endpoint -  Translates language to users to desired language https:/
 
 Dictionary Examples - Shows a sentence using the word that the user inputs https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-dictionary-examples
 
+Detect Language API - A  API that detects the language written https://detectlanguage.com/
+
+Countries API - https://restcountries.com/
 # Plan If First API Fails
 
 Google Translate API - A Translator API made by Google https://cloud.google.com/translate/docs/basic/translating-text
-
-Detect Language API - A  API that detects the language written https://detectlanguage.com/
 
 # Possibly More API'S
 HelloSalut API - An  API  that says Hi to the user in their language https://fourtonfish.com/project/hellosalut-api/
