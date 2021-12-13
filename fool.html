@@ -1,97 +1,135 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script type="module" src="main.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel= "stylesheet" href="style.css">
-  </head>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+</head>
 
-    <nav class="navbar is-transparent">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="images/logo-01.svg" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+<body>
+
+  <nav class="navbar has-shadow has-background-black">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="images/Logo-01.png" alt="site logo">
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </a>
-        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="https://bulma.io/">
-            Home
-          </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-              History
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                Overview
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-                Modifiers
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                Columns
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                Layout
-              </a>
-              <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                Form
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                Elements
-              </a>
-              <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                Components
-              </a>
-            </div>
-          </div>
-        </div>
-    
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control">
-                <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
-                  <span class="icon">
-                    <i class="fab fa-twitter"></i>
-                  </span>
-                  <span>
-                    Tweet
-                  </span>
-                </a>
-              </p>
-              <p class="control">
-                <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.3/bulma-0.9.3.zip">
-                  <span class="icon">
-                    <i class="fas fa-download"></i>
-                  </span>
-                  <span>Download</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </a>
+    </div>
 
-    
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Transcribez</strong> by <a href="https://jgthms.com">Saul, Josue, Kenneth</a>. 2021 Phase 1 project: TKH.</a>
-        </p>
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a class="navbar-item has-text-warning">Translate</a>
+        <a class="navbar-item has-text-warning">Language Detect</a>
+        <a class="navbar-item has-text-warning">Language Locator</a>
       </div>
-    </footer>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline is-mobile is-tablet is-desktop has-background-black">
+        <div class="column is-12-mobile is-6-tablet is-6-desktop">
+          <h1 class="is-size-3-mobile is-size-1-desktop title has-text-warning">Welcome to Transcribe!</h1>
+          <h2 class="is-size-5-mobile is-size-4-desktop subtitle has-text-warning">Your go to website for all your
+            translation needs.
+          </h2>
+          <h3 class="is-size-6 subitle has-text-bold has-text-warning-light">Created By: Josue, Saul, Kenneth</h3>
+        </div>
+        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
+          <img src="images/bubbles.png">
+        </div>
+        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
+          <img src="images/blossom.png">
+        </div>
+        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
+          <img src="images/buttercup.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-12 is-varible">
+        <div class="column is-12-mobile is-10-tablet is-12-desktop has-background-black">
+          <div class="tabs is-boxed has-text-warning">
+            <ul>
+              <li class="is-active" data-target="Translation-details">
+                <a class="has-text-warning">Translate</a>
+              </li>
+              <li data-target="Language-details">
+                <a class="has-text-warning">Language Detect</a>
+              </li>
+              <li data-target="Locator-details">
+                <a class="has-text-warning">Language Locator</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <div id="Translation-details">
+              <h3 class="is-size-5 title has-text-warning">Translation Details</h3>
+              <p class="has-text-warning-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+                culpa, delectus vel totam cupiditate
+                officia perferendis, molestias rerum, ratione laboriosam dolorum? Tempore incidunt ipsa ea velit, hic
+                illum sit nemo!</p>
+              <div class="columns is-12 is-varible">
+                <div class="field">
+                  <div class="control">
+                    <textarea class=" textarea" placeholder="Normal textarea"></textarea>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Normal textarea"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Language-details" class="is-hidden">
+              <h3 class="is-size-5 title has-text-warning">Language Details</h3>
+              <p class="has-text-warning-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis voluptas
+                ipsam at vero minus adipisci?
+                Eum totam necessitatibus aliquid reprehenderit minima aliquam. Ratione natus accusamus minima velit sint
+                quos non.</p>
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Normal textarea"></textarea>
+                </div>
+              </div>
+            </div>
+            <div id="Locator-details" class="is-hidden">
+              <h3 class="is-size-5 title has-text-warning">Locator Details</h3>
+              <p class="has-text-warning-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis rem
+                explicabo alias vel earum ipsa,
+                culpa dicta molestias voluptatibus eius, reprehenderit reiciendis cum, deserunt odio magni debitis animi
+                dolores tempora?</p>
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" placeholder="Normal textarea"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <footer class="footer has-background-black">
+    <div class="content has-text-centered has-text-warning">
+      <p>Copyright 2021 Josue, Saul, Kenneth</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
