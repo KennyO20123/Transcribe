@@ -261,6 +261,7 @@ Top5Lang.addEventListener("click", async () => {
     .request(data)
 
     .then(function (res) {
+      document.getElementById("myUl").innerHTML = "";
       let countries = [];
 
       for (let x = 0; x < res.data.length; x++) {
