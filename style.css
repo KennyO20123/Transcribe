@@ -2,6 +2,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   color: white;
   background-color: #ffe08a !important;
+  padding-top: 60px;
 }
 
 .container {
@@ -63,6 +64,15 @@ ul {
   }
 }
 
+::placeholder {
+  opacity: 6;
+}
+.imageResize {
+  width: 1200px;
+  height: 250px;
+  right: 5%;
+}
+
 .buttonsStuff {
   display: flex;
   align-items: center;
@@ -86,4 +96,62 @@ ul {
 
 .textColor {
   color: white;
+}
+
+.navbar-brand {
+  background-color: black;
+}
+
+.navbar-item img {
+  max-height: 4.5rem;
+}
+
+.navbar-burger {
+  height: 5.55rem;
+}
+
+a.navbar-item {
+  background-color: black;
+}
+.navbar-menu {
+  background-color: black;
+}
+/*Type Writing Effect */
+
+.typewriter-effect {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  color: #ffe08a;
+}
+
+.typewriter-effect > .text {
+  max-width: 0;
+  animation: typing 3s steps(var(--characters)) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typewriter-effect:after {
+  content: " |";
+  animation: blink 1s infinite;
+  animation-timing-function: step-end;
+}
+
+@keyframes typing {
+  75%,
+  100% {
+    max-width: calc(var(--characters) * 1ch);
+  }
+}
+
+@keyframes blink {
+  0%,
+  75%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
 }

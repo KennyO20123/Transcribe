@@ -46,6 +46,12 @@ tabs.forEach((tab) => {
   });
 });
 
+// Type Writing effect
+const typeWriter = document.getElementById("typewriter-text");
+const text = "Transcribe";
+
+typeWriter.innerHTML = text;
+typeWriter.style.setProperty("--characters", text.length);
 // Button For Switching Languages
 
 let buttonForSwitchingLanguages = document.getElementById(
@@ -269,10 +275,13 @@ buttonForDetectLanguage.addEventListener("click", async () => {
     alert("Please put something in the detection");
   } else if (text) {
     detectlanguage2NDAPI.detect(text).then(function (result) {
+      const languageNames = new Intl.DisplayNames([result[0].language], {
+        type: "language",
+      });
       document.getElementById("langCodeOfDetect").innerHTML =
         "The language" +
         " is " +
-        result[0].language +
+        languageNames.of(result[0].language) +
         " with a confidence level of " +
         result[0].confidence;
     });

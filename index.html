@@ -19,8 +19,11 @@
   <nav class="navbar has-shadow has-background-black followMe">
     <div class="navbar-brand sticky">
       <a class="navbar-item">
-        <img src="images/Logo-01.png" alt="site logo">
-        <a class="navbar-burger" id="burger">
+        <img src="images/Logo-01.png" alt="site logo" style="  max-height: 4.5rem;">
+        <div class="typewriter-effect">
+          <div class="text" id="typewriter-text"></div>
+        </div>
+        <a class="navbar-burger" id="burger" style="height: 5.55rem; padding-left: 15%; color: #fdc836;">
           <span></span>
           <span></span>
           <span></span>
@@ -30,15 +33,15 @@
 
     <div class="navbar-menu" id="nav-links">
       <div class="navbar-end">
-        <a class="navbar-item has-text-warning">Translate</a>
-        <a class="navbar-item has-text-warning">Language Detect</a>
+        <a  class="navbar-item has-text-warning">Translate</a>
+        <a  class="navbar-item has-text-warning">Language Detect</a>
         <a class="navbar-item has-text-warning">Language Locator</a>
       </div>
     </div>
   </nav>
 
-  <section class="section">
-    <div class="container">
+  <section class="section fixMe">
+    <div class="container " >
       <div class="columns is-vcentered is-multiline is-mobile is-tablet is-desktop has-background-black">
         <div class="column is-12-mobile is-6-tablet is-6-desktop">
           <h1 class="is-size-3-mobile is-size-1-desktop title has-text-warning">Welcome to Transcribe!</h1>
@@ -47,14 +50,9 @@
           </h2>
           <h3 class="is-size-6 subitle has-text-bold has-text-warning-light">Created By: Josue, Saul, Kenneth</h3>
         </div>
-        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
-          <img src="images/bubbles.png">
-        </div>
-        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
-          <img src="images/blossom.png">
-        </div>
-        <div class="column is-one-third-touch is-2-tablet is-2-mobile">
-          <img src="images/buttercup.png">
+       
+        <div class="column is-one-third-touch is-4-tablet is-2-mobile">
+          <img src="images/logo-01.svg" class="imageResize">
         </div>
       </div>
     </div>
@@ -63,11 +61,11 @@
   <section class="section">
     <div class="container">
       <div class="columns is-12 is-varible">
-        <div class="column is-12-mobile is-10-tablet is-12-desktop has-background-black">
+        <div class="column is-12-mobile is-12-tablet is-12-desktop has-background-black">
           <div class="tabs is-boxed has-text-warning">
             <ul>
               <li class="is-active" data-target="Translation-details">
-                <a class="has-text-warning">Translate</a>
+                <a class="has-text-warning"> Translate</a>
               </li>
               <li data-target="Language-details">
                 <a class="has-text-warning">Language Detect</a>
@@ -77,24 +75,27 @@
               </li>
             </ul>
           </div>
+
           <div class="px-2" id="tab-content">
             <div id="Translation-details">
-              <h3 class="is-size-5 title has-text-warning">Translation Details</h3>
-              <p class="has-text-warning-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
-                culpa, delectus vel totam cupiditate
-                officia perferendis, molestias rerum, ratione laboriosam dolorum? Tempore incidunt ipsa ea velit, hic
-                illum sit nemo!</p>
+              <h3 class="is-size-5 title has-text-warning">Translation</h3>
+              <p class="has-text-warning-light">Worried about going to a new place and not knowing the language??
+            
+             Well don't worry, with Transcribe as your travel buddy, there won't be any language that you won't be able to speak or understand!!</p>
+          
+              <h1 id="Detected" class="is-size-5 title has-text-warning" style="text-align: center;"></h1>
               <div class="columns is-12 is-varible">
                 <div class="field">
                   <div class="control">
                     <div class="field column is-full">
                       <label for="languagesSelection" class="textColor">Choose a language:</label>
+                      
                       <div class="select">
-                    
                         <select
                           name="languagesSelectionBar"
                           id="languageSelectionBar"
                           class="languageSelectionBar"
+                          style="background-color:#ffe08a"
                         >
                           <option value="detectLanguage">Detect language</option>
                           <option value="af">Afrikaans</option>
@@ -170,9 +171,11 @@
                       id="userTextInput"
                       class="textarea"
                       autocomplete="off"
+                      placeholder="Please Input What you Want To Be Translated Here In This Box"
                       value=""
                       cols="30"
                       rows="10"
+                      style="background-color:#f5e0a6;"
                     ></textarea>
                       </div>
                     </div>
@@ -182,8 +185,8 @@
                 </div>
                 <div class="field buttonsStuff">
                   <div class="control">
-                    <button id="buttonForSwitchingLanguages" type="button" class="button">switch</button>
-                    <button id="buttonForTranslate" class="button">Translate</button>
+                    <button id="buttonForSwitchingLanguages" type="button" class="button is-warning">switch</button>
+                    <button id="buttonForTranslate" class="button is-warning">Translate</button>
                     </div>
                     </div>
                 <div class="field">
@@ -195,6 +198,7 @@
                           name="languagesSelectionBar2"
                           id="languageSelectionBar2"
                           class="languageSelectionBar2"
+                          style="background-color:#ffe08a"
                         >
               
                         <option value="af">Afrikaans</option>
@@ -270,9 +274,11 @@
                       id="serverTranslatedText"
                       class="textarea"
                       autocomplete="off"
+                      placeholder="You Text Would Be Translated Here"
                       value=""
                       cols="30"
                       rows="10"
+                      style="background-color:#f5e0a6;"
                     ></textarea>
                   
                       </div>
@@ -283,17 +289,17 @@
             </div>
             <div id="Language-details" class="is-hidden">
               <h3 class="is-size-5 title has-text-warning">Language Details</h3>
-              <p class="has-text-warning-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis voluptas
-                ipsam at vero minus adipisci?
-                Eum totam necessitatibus aliquid reprehenderit minima aliquam. Ratione natus accusamus minima velit sint
-                quos non.</p>
+              <p class="has-text-warning-light">Have a sentence that you don't understand that you want us to detect?
+               Well, this section was made for you!
+                Just slap that text into our input bar and we'll take care of the rest.
+                We'll give you the result to your inquiry and even tell you how confident we are in our answer!</p>
               <div class="field">
                 <div class="control">
                   <section class="is-medium">
                     <p id="langCodeOfDetect"></p>
-                    <input type="text" value="" name="detectLang" id="userDetectInput" class="input is-rounded"  />
+                    <input type="text" value="" name="detectLang" id="userDetectInput" class="input is-rounded" autocomplete="off" placeholder="Please Input Language Here!!" style="background-color:#f5e0a6" />
                 <br>
-                    <button id="detectUsersInput" class="button">Detect!</button>
+                    <button id="detectUsersInput" class="button button is-warning">Detect!</button>
                   
                   </section>
                 </div>
@@ -301,10 +307,7 @@
             </div>
             <div id="Locator-details" class="is-hidden">
               <h3 class="is-size-5 title has-text-warning">Locator Details</h3>
-              <p class="has-text-warning-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis rem
-                explicabo alias vel earum ipsa,
-                culpa dicta molestias voluptatibus eius, reprehenderit reiciendis cum, deserunt odio magni debitis animi
-                dolores tempora?</p>
+              <p class="has-text-warning-light">Scared of going to a new place that might not speak a language you're comfortable with? Just select the language that you know and we'll tell you the countries that speak it! </p>
               <div class="field">
                 <div class="control">
                   <section class="is-medium" >
@@ -316,7 +319,7 @@
                    name="languagesSelectionBar3"
                    id="languageSelectionBar3"
                    class="languageSelectionBar3"
-                
+                   style="background-color:#ffe08a"
                 
                  >
                  <option value="afrikaans">Afrikaans</option>
@@ -376,7 +379,7 @@
                  
                   </div>
                   <br /> 
-                  <button id="Top5" > Countries That Speak that Language!</button>
+                  <button id="Top5" class="button is-warning" > Countries That Speak that Language!</button>
                 <br>
                   <h1 id="outputResults" ></h1>
                  
