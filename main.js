@@ -305,7 +305,7 @@ Top5Lang.addEventListener("click", async () => {
       for (let x = 0; x < res.data.length; x++) {
         countries.push(res.data[x].name.common);
       }
-      for (i = 0; i < countries.length; i++) {
+      for (let i = 0; i < countries.length; i++) {
         let li = document.createElement("li");
         let text = document.createTextNode(countries[i]);
         li.appendChild(text);
